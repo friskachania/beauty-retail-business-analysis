@@ -1,4 +1,4 @@
-#Beauty Retail Business Performance Analysis
+# Beauty Retail Business Performance Analysis
 
 ## Overview
 Business performance analysis for a beauty retail ecommerce company from 2021–2023 focusing on:
