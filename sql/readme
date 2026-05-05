@@ -1,15 +1,10 @@
-## SQL Files
-
+SQL Files
 This folder contains several SQL processes used for data cleaning, business analysis, and dashboard preparation:
-
-1. `checking.sql`
+1. checking.sql
    Initial data checking and data quality validation process.
-
-2. `business_performance.sql`
+2. business_performance.sql
    Main business performance view creation including KPI calculations, revenue analysis, profit margin, and cleaned business metrics.
-
-3. `promo_and_demand.sql`
+3. promo_and_demand.sql
    Promotional effectiveness and demand analysis built from the business performance view.
-
-4. `fulfillment_risk.sql`
+4. fulfillment_risk.sql
    Fulfillment and operational risk analysis including shipping delays, stockout rates, and return analysis built from the business performance view.
