@@ -1,0 +1,35 @@
+create view vw_fulfillment_risk as
+select
+years,
+months,
+month_num,
+quarter,
+region,
+warehouse_region,
+category,
+subcategory,
+brand,
+count(distinct order_id) orders,
+sum(units_sold) as units_sold,
+sum(net_revenue) as revenue,
+stockout_flag as stokout_rate,
+shipping_delay_flag as shipping_delay_rate,
+avg(lead_time_days) as avg_lead_time,
+sum(return_units) as total_returns,
+sum(return_units)::decimal/nullif(sum(units_sold),0) as  return_rate,
+coalesce(nullif(trim(return_reason),''),'Unspecified') as return_reason
+from vw_cleans_sales
+group by
+years,
+months,
+month_num,
+quarter,
+region,
+warehouse_region,
+category,
+subcategory,
+brand,
+return_reason,
+stokout_rate,
+shipping_delay_rate,
+avg_lead_time;
